@@ -66,7 +66,8 @@ ENV HOME /home/$USERNAME
 # Add zsh theme with niceties
 RUN curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash - \
     && sed -i 's/robbyrussell/kennethreitz/g' ~/.zshrc \
-    && echo 'source <(ng completion script)' >>~/.zshrc
+    && echo 'source <(ng completion script)' >>~/.zshrc \
+    && echo 'export PATH=$PATH:$HOME/.local/bin' >>~/.zshrc
 
 # Expose dev web port
 EXPOSE 8080
