@@ -70,4 +70,4 @@ RUN curl https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.
     && echo 'export PATH=$PATH:$HOME/.local/bin' >>~/.zshrc
 
 # Expose dev web port
-EXPOSE 8080
+EXPOSE 8000
